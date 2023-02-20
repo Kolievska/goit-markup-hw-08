@@ -1,0 +1,28 @@
+//  Companies
+  
+.brand__list {
+  @include centeredFlex ();  
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .brand__link {
+    @include centeredFlex ();
+    
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    fill: #afb1b8;
+    border-radius: 4px;
+    cursor: pointer;
+  
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+        border: 1px solid $accent-color;
+        fill: $accent-color;
+      }
+  }
+  

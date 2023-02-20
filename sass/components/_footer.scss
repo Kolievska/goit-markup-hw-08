@@ -1,0 +1,109 @@
+.footer__section {
+    background-color: #2f303a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .footer__container {
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  .footer__title { 
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .address {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      margin-right: 165px;
+    }
+  }
+  
+  .address__link {
+    display: block;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+    
+      &:hover,
+      &:focus {
+    color: $accent-color;
+  }
+
+      &:not(:last-child) {
+    margin-bottom: 9px;
+  }  
+  }
+
+  .address__map {
+    color: #ffffff;
+  }
+  .address__tel,
+  .address__mail {
+    color: rgba(255, 255, 255, 60%);
+  }
+  
+  .social-links {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+      margin-left: 88px;
+      margin-right: 93px;
+    }
+  }
+  
+  .social-links__list {
+    display: flex;
+    gap: 10px;
+
+    @media screen and (max-width: 1199px) {
+      justify-content: center;
+    }
+  }
+  
+  .social-links__link {
+    @include centeredFlex ();
+  
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: #ffffff;
+  
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+     &:hover,
+     &:focus {
+      background-color: $accent-color;
+    }
+  }
+  

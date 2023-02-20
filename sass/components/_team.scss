@@ -1,0 +1,80 @@
+ // Team
+  
+ .team {
+    background-color: $secondary-bgc;
+  }
+  
+  .team__set {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+  
+  .team__card {
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+      0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 30px * 3)/4);
+    }
+  }
+  
+  .member__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  
+  .member__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+  
+  .member__position {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+  
+  .member__social-links {
+    @include centeredFlex ();
+    gap: 10px;
+  }
+  
+  .member__link {
+    @include centeredFlex ();
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #afb1b8;
+  
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        
+     &:hover,
+     &:focus {
+    background-color: $accent-color;
+    fill: #ffffff;
+  }
+  }
