@@ -68,7 +68,8 @@
   }
   
   .portfolio__card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     color: $primary-color;
     text-decoration: none;
@@ -119,6 +120,7 @@
   }
   
   .card__content {
+    flex-grow: 1;
     padding: 20px 24px;
 
     border-right: 1px solid #eeeeee;

@@ -14,21 +14,40 @@
   <body>
     <header class="header__section">
       <div class="header__container container">
-        <nav class="header__nav">
+      <div class="mobile__header">
         <a href="./index.html" class="header__logo logo">
           <span lang="en"> <span class="logo__accent">Web</span>Studio</span>
         </a>
 
+        <button
+        type="button"
+        class="menu__button"
+        aria-expanded="false"
+        aria-controls="menu__container"
+        data-menu-button 
+        >
+
+        <svg  width="40" height="40"
+          aria-label="Перемикач мобільного меню">
+
+          <use class="menu__icon-menu" href="./images/sprite.svg#menu"></use>
+          <use class="menu__icon-cross" href="./images/sprite.svg#cross"></use>
+        </svg>
+      </button>
+    </div>  
+
+      <div class="menu__container" data-menu>
+      <nav class="header__nav">
         <ul class="header__list list">
-          <li>
+          <li class="header__item">
             <a href="./index.html" class="header__link header__link--current">Студія</a>
           </li>
 
-          <li>
+          <li class="header__item">
             <a href="./portfolio.html" class="header__link" >Портфоліо</a>
           </li>
 
-          <li>
+          <li class="header__item">
             <a href="" class="header__link" >Контакти</a>
           </li>
         </ul>
@@ -36,7 +55,8 @@
 
       <ul class="contacts list">
         <li>
-          <a class="contacts__link" href="mailto:info@devstudio.com">
+          <a class="contacts__link contacts__mail" 
+          href="mailto:info@devstudio.com">
             <svg class="contacts__icon" width="16" height="12">
               <use href="./images/sprite.svg#icon-mail"></use>
             </svg>
@@ -44,13 +64,31 @@
         </li>
 
         <li>
-          <a class="contacts__link" href="tel:+380961111111">
+          <a class="contacts__link contacts__phone" 
+          href="tel:+380961111111">
             <svg class="contacts__icon" width="10" height="16">
               <use href="./images/sprite.svg#icon-phone"></use>
             </svg>
             +38 096 111 11 11</a>
         </li>
       </ul>
+
+      <ul class="menu__social-links list">
+        <li class="menu__item">
+          <a href="" class="menu__social-link">Instagram</a>
+        </li>
+        <li class="menu__item"">
+          <a href="" class="menu__social-link">Twitter</a>
+        </li>
+        <li class="menu__item"">
+          <a href="" class="menu__social-link">Facebook</a>
+        </li>
+        <li cclass="menu__item"">
+          <a href="" class="menu__social-link">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
     </div>
     </header>
     <main>
@@ -482,6 +520,7 @@
 </div>
 
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 
 <script>
   (() => {
