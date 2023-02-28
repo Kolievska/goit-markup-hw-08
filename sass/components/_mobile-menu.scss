@@ -76,6 +76,7 @@
 
   .menu__social-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
@@ -91,8 +92,7 @@
     height: 22px;
     background-color: rgba(33, 33, 33, 0.2);
   }
-
-    
+ 
   .menu__social-link {
     font-weight: 500;
     font-size: 18px;

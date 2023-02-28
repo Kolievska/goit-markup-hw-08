@@ -205,6 +205,7 @@ img {
 
 .menu__social-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -433,13 +434,19 @@ img {
   margin-right: auto;
   margin-bottom: 30px;
   max-width: 696px;
-  font-size: 44px;
-  line-height: 1.36;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-weight: 900;
   color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -621,11 +628,24 @@ img {
   gap: 30px;
 }
 
+.brand__item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .brand__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .brand__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}
+
 .brand__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   fill: #afb1b8;

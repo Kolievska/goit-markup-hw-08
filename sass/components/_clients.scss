@@ -5,12 +5,23 @@
     flex-wrap: wrap;
     gap: 30px;
   }
-  
-  .brand__link {
+
+.brand__item {
+  flex-basis: calc((100% - 30px) /2);
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 60px) /3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 150px) /6);
+  }
+}
+
+.brand__link {
     @include centeredFlex ();
-    
-    width: 170px;
-    height: 92px;
+
+    height: 92px;    
     border: 1px solid #afb1b8;
     fill: #afb1b8;
     border-radius: 4px;
