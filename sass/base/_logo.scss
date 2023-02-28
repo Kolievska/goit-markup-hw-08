@@ -18,6 +18,14 @@
    
   .header__logo {
     color: #000;
+    
+    @media screen and (min-width: $tablet) {
+      margin-right: 88px;
+      }
+
+    @media screen and (min-width: $desktop) {
+    margin-right: 92px;
+    }
   }
   
   

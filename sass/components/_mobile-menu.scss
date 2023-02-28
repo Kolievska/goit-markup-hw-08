@@ -1,106 +1,106 @@
-.mobile-menu {
-    @media screen and (max-width: 767px) {
-        @include centeredFlex ($justify: space-between);
-        height: 60px;
-    }
-}
-
-.menu__container {
-    @media screen and (max-width: $tablet) {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-bottom: 48px;
-        background-color: #fff;
-
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-100%);
-  
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        &.is-open {
-            display: block;
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            }
-        }
-
-    @media screen and (min-width: $tablet) {
-        @include centeredFlex ();  
-        gap: 96px;
-    }
-
-    @media screen and (min-width: $desktop) {
-        gap: 315px;
-    }
-}
-
-.menu__button {
-    display: inline-flex;
+  .menu__toggle {
+    position: absolute;
+    @include centeredFlex ();
+    top: 10px;
+    right: 15px;
+    min-height: 40px;
+    min-width: 40px;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
-    
-    @media screen and (min-width: $tablet) {
-    display: none;
-    }
-}
 
-    .menu__icon-cross {
-        display: none;
-    }  
-
-    .menu__button.is-open .menu__icon-cross {
-        display: block;
-    }
-
-    .menu__icon-menu {
-        display: block;
-    }
-
-    .menu__button.is-open .menu__icon-menu {
-        display: none;
-    }
-
-    .menu__social-links {
-        display: flex;
-        gap: 10px;
-    
-        @media screen and (min-width: $tablet) {
-          display: none;
-        }
-    }
-
-    .menu__item {
-        display: flex;
-        gap: 10px;
-    }
-
-    .menu__item:not(:last-child)::after {
-          display: block;
-          content: '';
-          width: 1px;
-          height: 22px;
-          background-color: rgba(33, 33, 33, 0.2);
+    &:hover,
+    &:focus {
+     fill: $accent-color;
     }
     
-    .menu__social-link {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.22;
-        letter-spacing: 0.02em;
-        text-decoration: none;
-        color: $accent-color;
-
+    @media (min-width: $tablet) {
+      display: none;
     }
+  }
+
+  .menu__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: #fff;
+    z-index: 999;
+  
+    transform: translateY(-120%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+  }
+  
+  .menu__container.is-open {
+    transform: translateY(0);
+  }
+  
+  .menu__container .menu__toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+          
+  .menu__link {
+    display: block;
+    color: $title-color;
+    
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+              
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }       
+  }
+
+  .menu__contacts {
+    margin-bottom: 64px;
+  }
+
+  .menu__social-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-links__item {
+    display: flex;
+  }
+
+  .social-links__item:not(:last-child)::after {
+    display: block;
+    margin-left: 10px;
+    content: '';
+    width: 1px;
+    height: 22px;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+
+    
+  .menu__social-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $accent-color;
+  }
 
    
 
