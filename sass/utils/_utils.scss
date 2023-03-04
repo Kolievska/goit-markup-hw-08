@@ -4,7 +4,7 @@
     background-color: $primary-bgc;
     font-family: $primary-font-family;
   }
-  
+
   h1,
   h2,
   h3,
@@ -57,20 +57,20 @@
   }
   
   .container {
-    margin-left: auto;
-    margin-right: auto;
     max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
 
     @media screen and (min-width: $mobile) {
-    width: $mobile; 
+      margin-left: auto;
+      margin-right: auto;
+      width: $mobile; 
 }
     @media screen and (min-width: $tablet) {
-    width: $tablet; 
+      width: $tablet; 
 }
     @media screen and (min-width: $desktop) {
-    width: $desktop; 
+      width: $desktop; 
 }
   }
   

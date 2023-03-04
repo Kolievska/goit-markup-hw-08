@@ -66,7 +66,63 @@
         </li>
       </ul>
     </div>
+
+<!-- Mobile Menu -->
+
+<div class="mobile-menu js-menu-container" id="mobile-menu">
+  <div class="container menu__container">
+  <button class="menu__toggle menu__toggle--close js-close-menu">
+    <svg  width="40" height="40">
+      <use href="./images/sprite.svg#cross"></use>
+    </svg>
+  </button>
+
+        <ul class="menu__list list">
+          <li class="menu__item">
+            <a href="./index.html" class="menu__link menu__link--current">Студія</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="./portfolio.html" class="menu__link" >Портфоліо</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="" class="menu__link" >Контакти</a>
+          </li>
+        </ul>
+
+    <div class="menu-wrapper">
+      <ul class="menu__contacts list">
+        <li>
+          <a class="contacts__link menu__phone" 
+          href="tel:+380961111111">
+            +38 096 111 11 11</a>
+        </li>
+        <li>
+          <a class="contacts__link menu__mail" 
+          href="mailto:info@devstudio.com">
+            info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="menu__social-links list">
+        <li class="social-links__item">
+          <a href="" class="menu__social-link">Instagram</a>
+        </li>
+        <li class="social-links__item">
+          <a href="" class="menu__social-link">Twitter</a>
+        </li>
+        <li class="social-links__item">
+          <a href="" class="menu__social-link">Facebook</a>
+        </li>
+        <li class="social-links__item">
+          <a href="" class="menu__social-link">LinkedIn</a>
+        </li>
+      </ul>
     </div>
+  </div>
+    </div>
+
     </header>
 
     <main>
@@ -150,7 +206,8 @@
             <picture>
               <source srcset="./images/1-box-370.webp 1x,
               ./images/1-box-740.webp 2x"
-              type="image/webp">
+              type="image/webp"
+              width="370">
 
               <img 
               loading="lazy"
@@ -173,7 +230,8 @@
             <picture>
               <source srcset="./images/2-box-370.webp 1x,
               ./images/2-box-740.webp 2x"
-              type="image/webp">
+              type="image/webp"
+              width="370">
 
               <img 
               loading="lazy"
@@ -196,7 +254,8 @@
             <picture>
               <source srcset="./images/3-box-370.webp 1x,
               ./images/3-box-740.webp 2x"
-              type="image/webp">
+              type="image/webp"
+              width="370">
 
               <img 
               loading="lazy"
@@ -229,7 +288,8 @@
               <source srcset="./images/team/1-team-member-450.webp 450w,
               ./images/team/1-team-member-900.webp 900w,
               ./images/team/1-team-member-1350.webp 1350w"
-              type="image/webp">
+              type="image/webp"
+              sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw,  100vw">
 
               <img 
               loading="lazy"
@@ -279,7 +339,8 @@
               <source srcset="./images/team/2-team-member-450.webp 450w,
               ./images/team/2-team-member-900.webp 900w,
               ./images/team/2-team-member-1350.webp 1350w"
-              type="image/webp">
+              type="image/webp"
+              sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw,  100vw">
 
               <img 
               loading="lazy"
@@ -329,7 +390,8 @@
               <source srcset="./images/team/3-team-member-450.webp 450w,
               ./images/team/3-team-member-900.webp 900w,
               ./images/team/3-team-member-1350.webp 1350w"
-              type="image/webp">
+              type="image/webp"
+              sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw,  100vw">
 
               <img 
               loading="lazy"
@@ -379,7 +441,8 @@
             <source srcset="./images/team/4-team-member-450.webp 450w,
               ./images/team/4-team-member-900.webp 900w,
               ./images/team/4-team-member-1350.webp 1350w"
-              type="image/webp">
+              type="image/webp"
+              sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw,  100vw">
 
               <img 
               loading="lazy"
@@ -547,7 +610,7 @@
     <div class="modal">
       <button class="modal__close-btn" data-modal-close>
         <svg width="11" height="11">
-          <use href="./images/sprite.svg#cross"></use>
+          <use href="./images/sprite.svg#icon-close"></use>
         </svg>
       </button>
 
@@ -600,70 +663,11 @@
     </div>
 </div>
 
-<!-- Mobile Menu -->
 
-<div class="menu__container js-menu-container" id="mobile-menu">
-  <button class="menu__toggle js-close-menu">
-    <svg  width="40" height="40">
-      <use href="./images/sprite.svg#cross"></use>
-    </svg>
-  </button>
-
-        <ul class="menu__list list">
-          <li class="menu__item">
-            <a href="./index.html" class="menu__link">Студія</a>
-          </li>
-
-          <li class="menu__item">
-            <a href="./portfolio.html" class="menu__link" >Портфоліо</a>
-          </li>
-
-          <li class="menu__item">
-            <a href="" class="menu__link" >Контакти</a>
-          </li>
-        </ul>
-      </nav>
-
-    <div class="menu-wrapper">
-      <ul class="menu__contacts list">
-        <li>
-          <a class="contacts__link contacts__phone" 
-          href="tel:+380961111111">
-            <svg class="contacts__icon contacts__icon-phone">
-              <use href="./images/sprite.svg#icon-phone"></use>
-            </svg>
-            +38 096 111 11 11</a>
-        </li>
-        <li>
-          <a class="contacts__link contacts__mail" 
-          href="mailto:info@devstudio.com">
-            <svg class="contacts__icon contacts__icon-mail">
-              <use href="./images/sprite.svg#icon-mail"></use>
-            </svg>
-            info@devstudio.com</a>
-        </li>
-
-      </ul>
-
-      <ul class="menu__social-links list">
-        <li class="social-links__item">
-          <a href="" class="menu__social-link">Instagram</a>
-        </li>
-        <li class="social-links__item">
-          <a href="" class="menu__social-link">Twitter</a>
-        </li>
-        <li class="social-links__item">
-          <a href="" class="menu__social-link">Facebook</a>
-        </li>
-        <li cclass="social-links__item">
-          <a href="" class="menu__social-link">LinkedIn</a>
-        </li>
-      </ul>
-    </div>
-    </div>
 
 <script src="./js/modal.js"></script>
 <script defer src="./js/mobile-menu.js"></script>
+<script src="./js/submit.js"></script>
 
 <script
 defer
@@ -672,21 +676,5 @@ integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6
 crossorigin="anonymous"
 ></script>
 
-<script>
-  
-  (() => {
-    document
-      .querySelector('.form')
-      .addEventListener('submit', e => {
-        e.preventDefault();
-
-        new FormData(e.currentTarget).forEach((value, name) =>
-          console.log(`${name}: ${value}`),
-        );
-
-        e.currentTarget.reset();
-      });
-  })();
-</script>
   </body>
 </html>

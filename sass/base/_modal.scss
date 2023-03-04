@@ -85,11 +85,16 @@ body.modal-open {
 .form__title {
   margin-bottom: 12px;
 
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-color;
+
+  @media screen and (min-width: $mobile) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 
   @media screen and (min-width: $desktop) {
     line-height: 1.15;
@@ -148,7 +153,7 @@ body.modal-open {
 .form__comment {
   resize: none;
   width: 100%;
-  height: 120px;
+  height: 80px;
   margin-bottom: 20px;
   padding: 12px 16px;
 
@@ -160,19 +165,26 @@ body.modal-open {
   border-radius: 4px;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $mobile) {
+    height: 120px;
+  }
 }
 
 .policy {
   @include centeredFlex ();
-  
-  display: flex;
   flex-wrap: wrap;
   position: relative;
   margin-bottom: 30px;
-  gap: 9px;
-  font-size: 12px;
+  gap: 5px;
+  font-size: 10px;
   line-height: 1.16;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: $mobile) {
+    gap: 9px;
+    font-size: 12px;
+  }
 
   @media screen and (min-width: $desktop) {
     font-size: 14px;
@@ -190,19 +202,29 @@ body.modal-open {
 }
 
 .checkbox__icon { 
-  width: 16px;
-  height: 15px;
+  width: 12px;
+  height: 11px;
   border: 2px solid #000000;
   border-radius: 2px;
+
+  @media screen and (min-width: $mobile) {
+    width: 16px;
+    height: 15px;
+  }
 }
 
 .checkbox:checked + .checkbox__icon {
   background-image: url(../images/icon-check.svg);
-  width: 16px;
-  height: 15px;
+  width: 12px;
+  height: 11px;
   background-size: cover;
   background-origin: border-box;
   border-color: transparent;
+
+  @media screen and (min-width: $mobile) {
+    width: 16px;
+    height: 15px;
+  }
 }
 
 .checkbox:focus + .checkbox__icon {
