@@ -95,6 +95,7 @@
   }
   
   .card__overlay {
+    @include centeredFlex ();
     position: absolute;
     left: 0;
     top: 0;
@@ -108,12 +109,17 @@
   }
   
   .overlay__description {
-    padding: 63px 24px;
-
-    font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    
+    font-size: 14px;
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: #fff;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 18px;
+    }
   }
   
   .portfolio__card:hover .card__overlay {
